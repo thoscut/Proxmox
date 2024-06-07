@@ -32,7 +32,7 @@ msg_info "Installing MongoDB"
 wget -qO- https://pgp.mongodb.com/server-4.4.asc | gpg --dearmor | tee /etc/apt/trusted.gpg.d/mongodb-server-4.4.gpg >/dev/null 2>&1
 echo 'deb [ arch=amd64 signed-by=/etc/apt/trusted.gpg.d/mongodb-server-4.4.gpg ] https://repo.mongodb.org/apt/debian bookworm/mongodb-org/4.4 main' >/etc/apt/sources.list.d/mongodb-org-4.4.list
 $STD apt-get update
-$STD apt-get install -y mongodb-org
+$STD apt-get install -y mongodb-org=4.4
 msg_ok "Installed MongoDB"
 
 msg_info "Installing UniFi Network Server"
